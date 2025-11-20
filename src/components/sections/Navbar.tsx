@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, X } from 'lucide-react';
 import { MagneticButton } from '../ui/MagneticButton';
+import { PaintSplashModal } from '../ui/PaintSplashModal';
 
 interface NavbarProps {
     darkMode: boolean;
@@ -11,6 +12,7 @@ interface NavbarProps {
 export const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [modalContent, setModalContent] = useState<'about' | 'contact' | null>(null);
 
     useEffect(() => {
         const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -92,13 +94,23 @@ export const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
                                         animate={{ x: 0, opacity: 1 }}
                                         transition={{ delay: 0.1 + (i * 0.1) }}
                                     >
-                                        <a
-                                            href={`#${item.toLowerCase()}`}
-                                            onClick={() => setIsMenuOpen(false)}
-                                            className="text-6xl md:text-8xl font-black text-white hover:text-zinc-400 transition-colors tracking-tighter block"
+                                        <button
+                                            onClick={() => {
+                                                setIsMenuOpen(false);
+                                                if (item === 'Work') {
+                                                    // Scroll to projects section
+                                                    setTimeout(() => {
+                                                        document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
+                                                    }, 300);
+                                                } else {
+                                                    // Open modal for Contact and About
+                                                    setModalContent(item.toLowerCase() as 'about' | 'contact');
+                                                }
+                                            }}
+                                            className="text-6xl md:text-8xl font-black text-white hover:text-zinc-400 transition-colors tracking-tighter block w-full text-left"
                                         >
                                             {item}
-                                        </a>
+                                        </button>
                                     </motion.div>
                                 ))}
                             </div>
@@ -111,6 +123,14 @@ export const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
                     </>
                 )}
             </AnimatePresence>
+
+            {/* Paint Splash Modal */}
+            <PaintSplashModal
+                isOpen={modalContent !== null}
+                onClose={() => setModalContent(null)}
+                darkMode={darkMode}
+                content={modalContent || 'contact'}
+            />
         </>
     );
 };
