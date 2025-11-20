@@ -35,7 +35,8 @@ export const Hero = ({ darkMode }: HeroProps) => {
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-                            className="text-[clamp(4rem,13vw,12rem)] font-black leading-[0.85] tracking-tighter ml-[10vw] outline-text opacity-50"
+                            className={`text-[clamp(4rem,13vw,12rem)] font-black leading-[0.85] tracking-tighter ml-[10vw] outline-text opacity-50 ${darkMode ? 'text-white' : 'text-black'
+                                }`}
                         >
                             ENGINEER
                         </motion.h1>
@@ -53,7 +54,7 @@ export const Hero = ({ darkMode }: HeroProps) => {
 
                     <div className="mt-12 flex flex-col md:flex-row justify-between items-start md:items-end max-w-4xl">
                         <p className={`text-lg md:text-xl max-w-md leading-relaxed font-medium ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
-                            Hruthvik is an AI Data Engineer at Target Corporation, architecting large-scale pipelines with Scala, Spark, and Hadoop.
+                            Hruthvik is an AI Data Engineering Intern at Target Corporation, working on large-scale data pipelines with Scala, Spark, and Hadoop.
                         </p>
 
                         <div className="mt-8 md:mt-0">

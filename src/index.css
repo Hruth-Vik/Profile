@@ -3,13 +3,29 @@
 @tailwind utilities;
 
 @layer utilities {
-  .stroke-text {
-    -webkit-text-stroke: 1px rgba(128, 128, 128, 0.2);
-  }
+
+  /* Outline text utility */
   .outline-text {
-    -webkit-text-stroke: 1px currentColor;
-    color: transparent;
+    -webkit-text-stroke: 2px currentColor;
+    -webkit-text-fill-color: transparent;
+    paint-order: stroke fill;
   }
+
+  /* Stroke text utility */
+  .stroke-text {
+    -webkit-text-stroke: 1px currentColor;
+  }
+}
+
+/* Text selection - adapts to theme */
+::selection {
+  background-color: currentColor;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: currentColor;
+  color: white;
 }
 
 body {

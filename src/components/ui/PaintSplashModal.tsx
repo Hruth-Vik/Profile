@@ -168,8 +168,8 @@ export const PaintSplashModal = ({ isOpen, onClose, darkMode, content }: PaintSp
                                 delay: 0.15
                             }}
                             className={`relative w-full max-w-5xl max-h-[90vh] overflow-hidden rounded-3xl pointer-events-auto ${darkMode
-                                    ? 'bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 border-2 border-pink-500/30'
-                                    : 'bg-gradient-to-br from-white via-pink-50 to-white border-2 border-pink-500/20'
+                                ? 'bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 border-2 border-pink-500/30'
+                                : 'bg-gradient-to-br from-white via-pink-50 to-white border-2 border-pink-500/20'
                                 }`}
                             style={{
                                 backdropFilter: 'blur(30px)',
@@ -247,8 +247,8 @@ export const PaintSplashModal = ({ isOpen, onClose, darkMode, content }: PaintSp
                                             <div className="relative">
                                                 <motion.label
                                                     className={`absolute left-4 transition-all duration-200 font-bold ${focusedField === 'name' || formData.name
-                                                            ? '-top-3 text-sm text-pink-500 bg-white dark:bg-zinc-900 px-2'
-                                                            : 'top-4 text-base ' + (darkMode ? 'text-zinc-500' : 'text-zinc-400')
+                                                        ? '-top-3 text-sm text-pink-500 bg-white dark:bg-zinc-900 px-2'
+                                                        : 'top-4 text-base ' + (darkMode ? 'text-zinc-500' : 'text-zinc-400')
                                                         }`}
                                                 >
                                                     Your Name ✨
@@ -260,8 +260,8 @@ export const PaintSplashModal = ({ isOpen, onClose, darkMode, content }: PaintSp
                                                     onFocus={() => setFocusedField('name')}
                                                     onBlur={() => setFocusedField(null)}
                                                     className={`w-full px-6 py-4 rounded-2xl border-3 text-lg font-medium transition-all focus:outline-none ${darkMode
-                                                            ? 'bg-zinc-800/50 border-zinc-700 text-white focus:border-pink-500 focus:bg-zinc-800'
-                                                            : 'bg-white border-zinc-200 text-black focus:border-pink-500 focus:bg-pink-50/30'
+                                                        ? 'bg-zinc-800/50 border-zinc-700 text-white focus:border-pink-500 focus:bg-zinc-800'
+                                                        : 'bg-white border-zinc-200 text-black focus:border-pink-500 focus:bg-pink-50/30'
                                                         }`}
                                                 />
                                             </div>
@@ -270,8 +270,8 @@ export const PaintSplashModal = ({ isOpen, onClose, darkMode, content }: PaintSp
                                             <div className="relative">
                                                 <motion.label
                                                     className={`absolute left-4 transition-all duration-200 font-bold ${focusedField === 'email' || formData.email
-                                                            ? '-top-3 text-sm text-pink-500 bg-white dark:bg-zinc-900 px-2'
-                                                            : 'top-4 text-base ' + (darkMode ? 'text-zinc-500' : 'text-zinc-400')
+                                                        ? '-top-3 text-sm text-pink-500 bg-white dark:bg-zinc-900 px-2'
+                                                        : 'top-4 text-base ' + (darkMode ? 'text-zinc-500' : 'text-zinc-400')
                                                         }`}
                                                 >
                                                     Email Address 📧
@@ -283,8 +283,8 @@ export const PaintSplashModal = ({ isOpen, onClose, darkMode, content }: PaintSp
                                                     onFocus={() => setFocusedField('email')}
                                                     onBlur={() => setFocusedField(null)}
                                                     className={`w-full px-6 py-4 rounded-2xl border-3 text-lg font-medium transition-all focus:outline-none ${darkMode
-                                                            ? 'bg-zinc-800/50 border-zinc-700 text-white focus:border-pink-500 focus:bg-zinc-800'
-                                                            : 'bg-white border-zinc-200 text-black focus:border-pink-500 focus:bg-pink-50/30'
+                                                        ? 'bg-zinc-800/50 border-zinc-700 text-white focus:border-pink-500 focus:bg-zinc-800'
+                                                        : 'bg-white border-zinc-200 text-black focus:border-pink-500 focus:bg-pink-50/30'
                                                         }`}
                                                 />
                                             </div>
@@ -293,8 +293,8 @@ export const PaintSplashModal = ({ isOpen, onClose, darkMode, content }: PaintSp
                                             <div className="relative">
                                                 <motion.label
                                                     className={`absolute left-4 transition-all duration-200 font-bold ${focusedField === 'message' || formData.message
-                                                            ? '-top-3 text-sm text-pink-500 bg-white dark:bg-zinc-900 px-2'
-                                                            : 'top-4 text-base ' + (darkMode ? 'text-zinc-500' : 'text-zinc-400')
+                                                        ? '-top-3 text-sm text-pink-500 bg-white dark:bg-zinc-900 px-2'
+                                                        : 'top-4 text-base ' + (darkMode ? 'text-zinc-500' : 'text-zinc-400')
                                                         }`}
                                                 >
                                                     Your Message 💭
@@ -306,8 +306,8 @@ export const PaintSplashModal = ({ isOpen, onClose, darkMode, content }: PaintSp
                                                     onBlur={() => setFocusedField(null)}
                                                     rows={6}
                                                     className={`w-full px-6 py-4 rounded-2xl border-3 text-lg font-medium transition-all focus:outline-none resize-none ${darkMode
-                                                            ? 'bg-zinc-800/50 border-zinc-700 text-white focus:border-pink-500 focus:bg-zinc-800'
-                                                            : 'bg-white border-zinc-200 text-black focus:border-pink-500 focus:bg-pink-50/30'
+                                                        ? 'bg-zinc-800/50 border-zinc-700 text-white focus:border-pink-500 focus:bg-zinc-800'
+                                                        : 'bg-white border-zinc-200 text-black focus:border-pink-500 focus:bg-pink-50/30'
                                                         }`}
                                                 />
                                             </div>
@@ -341,10 +341,10 @@ export const PaintSplashModal = ({ isOpen, onClose, darkMode, content }: PaintSp
                                         ABOUT ME
                                     </h2>
                                     <p className={`text-xl leading-relaxed ${darkMode ? 'text-zinc-300' : 'text-zinc-700'}`}>
-                                        I'm an AI Data Engineer passionate about building scalable data pipelines and architecting large-scale systems with Scala, Spark, and Hadoop.
+                                        I'm an AI Data Engineering Intern passionate about building scalable data pipelines and working with large-scale systems using Scala, Spark, and Hadoop.
                                     </p>
                                     <p className={`text-xl leading-relaxed ${darkMode ? 'text-zinc-300' : 'text-zinc-700'}`}>
-                                        Currently working at Target Corporation, I specialize in transforming complex data into actionable insights.
+                                        Currently interning at Target Corporation, I'm gaining hands-on experience in transforming complex data into actionable insights.
                                     </p>
                                 </motion.div>
                             )}
