@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, X } from 'lucide-react';
 import { MagneticButton } from '../ui/MagneticButton';
 import { PaintSplashModal } from '../ui/PaintSplashModal';
+import { Logo } from '../shared/Logo';
 
 interface NavbarProps {
     darkMode: boolean;
@@ -30,10 +31,8 @@ export const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-6 transition-all duration-500 ${isScrolled ? 'bg-transparent backdrop-blur-sm' : 'bg-transparent'}`}
             >
-                <a href="#" className="text-2xl font-black tracking-tighter z-50 flex items-center gap-2 group">
-                    <div className={`w-10 h-10 border-2 flex items-center justify-center rounded-full transition-all duration-500 group-hover:rotate-180 ${darkMode ? 'border-white bg-white text-black' : 'border-black bg-black text-white'}`}>
-                        <span className="text-sm font-mono font-bold">H</span>
-                    </div>
+                <a href="#" className="text-2xl font-black tracking-tighter z-50 group">
+                    <Logo variant="icon" size={40} className={darkMode ? 'text-white' : 'text-black'} />
                 </a>
 
                 <div className={`flex items-center gap-4 ${darkMode ? 'text-white' : 'text-black'}`}>
@@ -75,9 +74,7 @@ export const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
                             className="fixed top-0 left-0 bottom-0 w-full md:w-[500px] bg-black z-[70] p-12 flex flex-col justify-between"
                         >
                             <div className="flex justify-between items-center">
-                                <div className="w-10 h-10 border-2 border-white bg-white text-black flex items-center justify-center rounded-full">
-                                    <span className="text-sm font-mono font-bold">H</span>
-                                </div>
+                                <Logo variant="icon" size={40} className="text-white" />
                                 <button
                                     onClick={() => setIsMenuOpen(false)}
                                     className="w-12 h-12 rounded-full border border-white text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors"

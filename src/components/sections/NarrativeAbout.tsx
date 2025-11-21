@@ -27,45 +27,45 @@ export const NarrativeAbout = ({ darkMode }: NarrativeAboutProps) => {
 
                             {/* Chapter 1 */}
                             <motion.div
-                                style={{ opacity: useTransform(scrollYProgress, [0, 0.25, 0.35], [0, 1, 0.2]) }}
+                                style={{ opacity: useTransform(scrollYProgress, [0, 0.25, 0.35], [0, 1, 0.3]) }}
                                 className="transition-opacity duration-500"
                             >
-                                <h3 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 opacity-60">01 — The Origin</h3>
+                                <h3 className={`text-xs font-bold uppercase tracking-[0.3em] mb-6 ${darkMode ? 'opacity-80' : 'opacity-60'}`}>01 — The Origin</h3>
                                 <p className="text-3xl md:text-6xl font-bold leading-tight">
                                     Alliance University <br />
-                                    <span className={`${darkMode ? 'text-zinc-500' : 'text-zinc-600'}`}>Graduate (9 CGPA).</span>
+                                    <span className={`${darkMode ? 'text-zinc-300 md:text-zinc-500' : 'text-zinc-600'}`}>Graduate (9 CGPA).</span>
                                 </p>
-                                <p className="mt-6 text-base md:text-lg max-w-md opacity-70">
+                                <p className={`mt-6 text-base md:text-lg max-w-md ${darkMode ? 'opacity-90 md:opacity-70' : 'opacity-70'}`}>
                                     Started with a strong foundation in Information Technology. Now architecting enterprise data solutions at Target.
                                 </p>
                             </motion.div>
 
                             {/* Chapter 2 */}
                             <motion.div
-                                style={{ opacity: useTransform(scrollYProgress, [0.3, 0.5, 0.65], [0.2, 1, 0.2]) }}
+                                style={{ opacity: useTransform(scrollYProgress, [0.3, 0.5, 0.65], [0.3, 1, 0.3]) }}
                                 className="transition-opacity duration-500"
                             >
-                                <h3 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 opacity-60">02 — The Method</h3>
+                                <h3 className={`text-xs font-bold uppercase tracking-[0.3em] mb-6 ${darkMode ? 'opacity-80' : 'opacity-60'}`}>02 — The Method</h3>
                                 <p className="text-4xl md:text-6xl font-bold leading-tight">
                                     Big Data & <br />
-                                    <span className={`${darkMode ? 'text-zinc-500' : 'text-zinc-600'}`}>Pipelines.</span>
+                                    <span className={`${darkMode ? 'text-zinc-300 md:text-zinc-500' : 'text-zinc-600'}`}>Pipelines.</span>
                                 </p>
-                                <p className="mt-6 text-lg max-w-md opacity-70">
+                                <p className={`mt-6 text-lg max-w-md ${darkMode ? 'opacity-90 md:opacity-70' : 'opacity-70'}`}>
                                     I design scalable ETL transformations using Scala, Spark, and Hadoop. Efficiency and reliability are my core metrics.
                                 </p>
                             </motion.div>
 
                             {/* Chapter 3 */}
                             <motion.div
-                                style={{ opacity: useTransform(scrollYProgress, [0.6, 0.85, 1], [0.2, 1, 1]) }}
+                                style={{ opacity: useTransform(scrollYProgress, [0.6, 0.85, 1], [0.3, 1, 1]) }}
                                 className="transition-opacity duration-500"
                             >
-                                <h3 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 opacity-60">03 — The Vision</h3>
+                                <h3 className={`text-xs font-bold uppercase tracking-[0.3em] mb-6 ${darkMode ? 'opacity-80' : 'opacity-60'}`}>03 — The Vision</h3>
                                 <p className="text-4xl md:text-6xl font-bold leading-tight">
                                     Data-Driven <br />
-                                    <span className={`${darkMode ? 'text-zinc-500' : 'text-zinc-600'}`}>Future.</span>
+                                    <span className={`${darkMode ? 'text-zinc-300 md:text-zinc-500' : 'text-zinc-600'}`}>Future.</span>
                                 </p>
-                                <p className="mt-6 text-lg max-w-md opacity-70">
+                                <p className={`mt-6 text-lg max-w-md ${darkMode ? 'opacity-90 md:opacity-70' : 'opacity-70'}`}>
                                     From raw ingestion to business-ready datasets. Ensuring data availability and quality for analytical objectives.
                                 </p>
                             </motion.div>
